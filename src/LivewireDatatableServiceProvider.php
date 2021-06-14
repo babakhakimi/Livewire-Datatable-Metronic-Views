@@ -1,6 +1,6 @@
 <?php
 
-namespace Emmanuel\LivewireDatatableBs4;
+namespace BabakHakimi\LivewireDatatableMetronic;
 
 use Illuminate\Support\ServiceProvider as Provider;
 
@@ -14,18 +14,18 @@ final class LivewireDatatableServiceProvider extends Provider
     public function boot(): void
     {
         //Load the views
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/bootstrap', 'LivewireDatatableBs4');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/metronic', 'LivewireDatatableMetronic');
         //Publish views
         $this->publishes([
-            __DIR__ . '/../resources/views/bootstrap' => resource_path('views/livewire/datatables'),
-        ], 'livewire-datatable-bs4');
+            __DIR__ . '/../resources/views/metronic' => resource_path('views/livewire/datatables'),
+        ], 'livewire-datatable-metronic');
 
         //Load language translations...
-        $this->loadTranslationsFrom(resource_path('lang'), 'LivewireDatatableBs4');
+        $this->loadTranslationsFrom(resource_path('lang'), 'LivewireDatatableMetronic');
         //Publish translations
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/LivewireDatatableBs4'),
-        ], 'livewire-datatable-bs4');
+            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/LivewireDatatableMetronic'),
+        ], 'livewire-datatable-metronic');
     }
 
     /**
